@@ -61,3 +61,8 @@ In the Etch/scripts directory:
 2. <code> bash extract.sh </code>
 
 CSV files will be contained within the scripts directory matching the depicted db names.  A backup directory, 'backup' is also created containing the raw Trepn sqlite databases for extensive querying/analysis. 
+
+CSV Files will be in the form:
+sensor_name,timestamp,value,delta,marker_duration,marker_name
+
+
