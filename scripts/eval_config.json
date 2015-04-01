@@ -1,0 +1,12 @@
+[
+{
+    "eval": "EtchTest",
+    "dbName": "MyEtchTest",
+    "iterations": "100000"
+},
+{
+    "eval": "EtchTest",
+    "dbName": "MyEtchTestLong",
+    "iterations": "1000000"
+}
+]
