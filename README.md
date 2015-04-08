@@ -11,8 +11,6 @@ Android Energy Profiling Automation on Unix based systems using Trepn Profiler
 
    If your Android project does not have a git repository, simply use <code> git clone [url-to-this-repo]
 
-2. In Android Studio, right click on the Etch directory and select Make module ...
-
 3. In the project settings.gradle file, add: <code> ':etch'</code>
 
 4. In your project's module (typically named 'app'), edit build.gradle to include the following lines: <code> dependencies {
@@ -65,4 +63,20 @@ CSV files will be contained within the scripts directory matching the depicted d
 CSV Files will be in the form:
 sensor_name,timestamp,value,delta,marker_duration,marker_name
 
+## Notes to the Scaloid Users 
 
+In the case the test classes are not referenced in the Scaloid project, Scaloid elimimates the test classes during the execution of proguard. 
+
+To prevent this, Scaloid's proguard configuration should include 
+
+    -keep class <package name>.<class name> {
+        <init>(...);
+    }
+    
+or     
+
+    -keep class <package name>.<class name> {
+        public protected *;
+    }
+
+where <package name>.<class name> is the name of the class that is under test. 
