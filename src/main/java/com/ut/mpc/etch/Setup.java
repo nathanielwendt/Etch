@@ -4,6 +4,9 @@ package com.ut.mpc.etch;
  * Created by nathanielwendt on 3/28/15.
  */
 public class Setup {
+    //package application id
+    public static final String BASE_DIR = "com.ut.mpc";
+
     //directory which contains your 'eval' classes
     public static final String EVAL_DIR = "com.ut.mpc.lstrtree.evals";
 
