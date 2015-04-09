@@ -57,7 +57,7 @@ In the Etch/scripts directory:
 
 1. <code> python run_eval.py </code>
 
-This command executes the evaluation plan as described in eval_config.json.  The phone will indicate that the evaluation is complete with a message "Etch Execution Complete" and the Logs will include a statement indicating the evaluation is complete.
+This command executes the evaluation plan as described in eval_config.json.  The device will indicate that the evaluation is complete with a message "Etch Execution Complete" and the Logs will include a statement indicating the evaluation is complete.
 
 2. <code> bash extract.sh </code>
 
