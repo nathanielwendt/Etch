@@ -6,7 +6,7 @@ sqlite3 $1 <<!
 .mode csv
 .output $1-$2.csv
 
-select '$2', IFNULL(sensor_name, '"application_state"'), timestamp, value, delta, marker_time, description
+select '$2', IFNULL(sensor_name, 'application_state'), timestamp, value, delta, marker_time, description
 FROM
 
 (select '$2', (select name from application_state_statistics_1 WHERE _id=substr('$2',8,3)) as sensor_name,

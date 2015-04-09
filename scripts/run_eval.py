@@ -20,5 +20,5 @@ with open(setup_file, 'r') as data_file:
 with open('eval_config.json') as data_file:    
     data = json.load(data_file)
 
-command = 'adb shell "am start -e plan ' + urllib.quote(json.dumps(data)) + ' -n ' + base_dir + '/.etch.EtchBaseActivity"'
+command = 'adb shell "am start -e plan ' + urllib.quote(json.dumps(data)) + ' -n ' + base_dir + '/com.ut.mpc.etch.EtchBaseActivity"'
 os.system(command)
