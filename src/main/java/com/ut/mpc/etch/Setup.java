@@ -4,8 +4,11 @@ package com.ut.mpc.etch;
  * Created by nathanielwendt on 3/28/15.
  */
 public class Setup {
+    //package application id
+    public static final String BASE_DIR = "com.example.nathanielwendt.etchtest";
+
     //directory which contains your 'eval' classes
-    public static final String EVAL_DIR = "com.ut.mpc.lstrtree.evals";
+    public static final String EVAL_DIR = "com.example.nathanielwendt.etchtest.evals";
 
     //number of ms to wait after trepn has been called before running tests
     //this time is typically used to generate a baseline for energy measurements

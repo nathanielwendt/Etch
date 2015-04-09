@@ -1,6 +1,8 @@
 #!/bin/bash -x
 
-output_dir=$@
+mkdir ../data
+
+output_dir='../data'
 #Get all of a directory(sdcard), and filter them
 for file in `adb shell ls /sdcard/trepn/*.db`
 do
@@ -10,14 +12,16 @@ do
     adb shell "rm $file"
 done
 
-mkdir backup
+mkdir ../data/backup
+backup_dir='../data/backup'
+cd $output_dir
 for db in *.db;
 do
     touch $db.csv
     sqlite3 $db "Select name from sqlite_master where name like 'sensor_%';" |
     while read -r line;
     do
-        bash sql.sh $db $line
+        bash ../scripts/sql.sh $db $line
 
         #append sensor file to full output file
         cat $db-$line.csv >> $db.csv
@@ -26,7 +30,7 @@ do
         rm $db-$line.csv
     done;
 
-    mv $db backup/
+    mv $db $backup_dir
     rm $db-shm
     rm $db-wal
 done
