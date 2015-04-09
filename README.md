@@ -56,12 +56,15 @@ Each Eval file represents a distinct test. The following are descriptions of the
 In the Etch/scripts directory:
 
 1. <code> python run_eval.py </code>
+
+This command executes the evaluation plan as described in eval_config.json.  The phone will indicate that the evaluation is complete with a message "Etch Execution Complete" and the Logs will include a statement indicating the evaluation is complete.
+
 2. <code> bash extract.sh </code>
 
-CSV files will be contained within the scripts directory matching the depicted db names.  A backup directory, 'backup' is also created containing the raw Trepn sqlite databases for extensive querying/analysis. 
+This command extracts the trepn database files, processes/aggregates them, and places them inside the Etch/data directory.  Each 'eval' run will have its own CSV file which is an amalgamation of the marker values for each of the recorded sensors.  A backup directory is also created, Etch/data/backup, with the raw Trepn sqlite databases for additional analysis.
 
-CSV Files will be in the form:
-sensor_name,timestamp,value,delta,marker_duration,marker_name
+CSV files follow the format:
+<code>sensor_name,timestamp,value,delta,marker_duration,marker_name</code>
 
 ## Notes to the Scaloid Users 
 
