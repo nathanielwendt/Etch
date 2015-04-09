@@ -118,9 +118,6 @@ public class MultiProfiler {
             runningSum += execTime;
             count++;
             avg = runningSum / count;
-            Log.d(TAG, "avg: " + avg);
-            Log.d(TAG, "execTime: " + execTime);
-
         } while(checkStabilizerCondition(count, Setup.STABILIZE_LOOP_COUNT, avg, execTime, Setup.STABILIZE_THRESH));
     }
 
