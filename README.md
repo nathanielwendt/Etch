@@ -83,3 +83,10 @@ or
     }
 
 where <package name>.<class name> is the name of the class that is under test. 
+
+
+## Roadmap
+
+1. Include more descriptive log statements, including writing a custom logger that writes the log as well as to a file for extraction and evaluation (more permament than the logs).
+
+2. Add an execution cutoff feature when the battery is below some threshold percentage.  Support claim with evaluation of test over varying battery levels to indicate the stable range for execution.
