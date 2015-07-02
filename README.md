@@ -7,9 +7,9 @@ Android Energy Profiling Automation on Unix based systems using Trepn Profiler
 
    Go to the root of your project (module-level).
 
-   If your Android project is represented within a git repository, use <code> git submodule add [url-to-this-repo]
+   If your Android project is represented within a git repository, use <code> git submodule add [url-to-this-repo] </code>
 
-   If your Android project does not have a git repository, simply use <code> git clone [url-to-this-repo]
+   If your Android project does not have a git repository, simply use <code> git clone [url-to-this-repo] </code>
 
 3. In the project settings.gradle file, add: <code> ':etch'</code>
 
