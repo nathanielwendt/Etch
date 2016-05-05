@@ -50,6 +50,8 @@ Each Eval file represents a distinct test. The following are descriptions of the
 
 <li> Markers: Markers can be started and stopped at any time to mark significant portions of your test.  For example, you may want to profile different portions of your test such as the compression portion and transmission portion.  The markers facilitate ordering this information for analysis in the csv file. The third argument to startMark is the name of the marker that will be referred to in the output csv file.  Note that output data will only be included under a marker, so even if you don't need distinct marking within a test, <b>you must use at least one marker</b>.
 
+As stated from the Trepn User Guide: "Application State Intents sent more frequently than every 2 or 3 sec are unlikely to provide meaningful data, due to the limits in the frequency in which the data points can be accessed".  For Etch, this corresponds to the marker duration, so make sure to plan your markers accordingly.
+
 ####Running Your First Evaluation Plan####
 *Note: make sure your code is deployed to your device*
 
